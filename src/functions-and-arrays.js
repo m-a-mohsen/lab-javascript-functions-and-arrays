@@ -12,42 +12,8 @@ function maxOfTwoNumbers( num1, num2) {
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
 function findLongestWord(arrOfWords) {
-  
-  /* 
-- output array of longest equal words
-
-- check if the first word is longer than the other words
-if yes:
-add to longest word array
-repeate 
-if not continue 
-
-
-  
-  */
-  let longestWord = null;
-  let longestWordsArr = [];
-  
-  if (arrOfWords === [] || !arrOfWords ) return null;
-
-  if (arrOfWords.length >= 1 ){
-    longestWord = arrOfWords[0];
-  }
-
-  for (let i = 1; i < arrOfWords.length; i++) {
-    if (longestWord.length > arrOfWords[i].length) {
-      continue;
-    } else if (longestWord.length < arrOfWords[i].length){
-      longestWord = arrOfWords[i];
-    }
-    
-  if (longestWord.length = arrOfWords[i].length) {
-      longestWordsArr.push(arrOfWords[i]);
-    }
-  }
-  if (longestWordsArr.findIndex(longestWord) = -1){
-    return longestWordsArr[0]
-  }
+  let longestWord = arrOfWords[0];
+  words.forEach(word => word.length > longestWord.length? longestWord = word: word)
   return  longestWord;
 }
 
@@ -57,10 +23,7 @@ if not continue
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(array) {
-  for (let i = 0; i < array.length; i++) {
-    let sum = array[i] +;
-    
-  }
+  return numbers.reduce((a,b)=> a+b)
 }
 
 
